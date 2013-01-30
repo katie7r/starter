@@ -1,4 +1,11 @@
 Starter::Application.routes.draw do
+  resources :pokemons
+
+
+
+  match '/pokemon',   to: 'pokemons'
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
