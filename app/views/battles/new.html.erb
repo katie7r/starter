@@ -1,0 +1,15 @@
+<% provide(:title, 'I Choose You!') %>
+
+<h1>New Battle</h1>
+
+<% form_for(@battle) do |f| %>
+	<h2>Choose Your Pokemon</h2>
+	<%= f.label :chosen_pokemon %>
+	<%= f.text_field :chosen_pokemon %>
+
+	<h2>Challenge a Pokemon</h2>
+	<%= f.label :foe_pokemon %>
+	<%= f.text_field :foe_pokemon %>
+
+	<%= f.submit "MAKE EYE CONTACT" %>
+<% end %>

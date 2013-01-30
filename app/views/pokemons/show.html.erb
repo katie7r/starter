@@ -1,5 +1,5 @@
 <% provide(:title, @pokemon.name.titleize) %>
-<% provide(:favicon, @pokemon.name + '-icon.png') %>
+<% provide(:favicon, favicon(@pokemon.name)) %>
 
 <hgroup>
 	<h1><%= @pokemon.name.titleize %></h1>

@@ -1,11 +1,15 @@
 Starter::Application.routes.draw do
-  resources :pokemons
+  
+  resources :pokemons, :battles
 
-
+  # root to: '(home page)'
 
   match '/pokedex',   to: 'pokemons#index'
-  match '/pokemon',   to: 'pokemons#pokemon'
+  match '/pokemon',   to: 'pokemons#show'
   match '/capture',   to: 'pokemons#new'
+
+  match '/choose',    to: 'battles#new'
+  match '/battle',    to: 'battles#show'
 
 
   # The priority is based upon order of creation:
