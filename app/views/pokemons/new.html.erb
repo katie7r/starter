@@ -1,0 +1,37 @@
+<% provide(:title, 'Capture') %>
+<% provide(:favicon, 'pokeball-icon.png') %>
+
+<h1>Add New Pokemon</h1>
+
+<%= form_for(@pokemon) do |f| %>
+
+	<%= f.label :name %>
+	<%= f.text_field :name %>
+
+	<%= f.label :type1 %>
+	<%= f.text_field :type1 %>
+	
+	<%= f.label :type2 %>
+	<%= f.text_field :type2 %>
+	
+	<%= f.label :hp %>
+	<%= f.text_field :hp %>
+	
+	<%= f.label :attack %>
+	<%= f.text_field :attack %>
+	
+	<%= f.label :defense %>
+	<%= f.text_field :defense %>
+	
+	<%= f.label :spatk %>
+	<%= f.text_field :spatk %>
+	
+	<%= f.label :spdef %>
+	<%= f.text_field :spdef %>
+	
+	<%= f.label :speed %>
+	<%= f.text_field :speed %>
+
+	<%= f.submit "THROW POKEBALL" %>
+<% end %>
+

@@ -3,7 +3,9 @@ Starter::Application.routes.draw do
 
 
 
-  match '/pokemon',   to: 'pokemons'
+  match '/pokedex',   to: 'pokemons#index'
+  match '/pokemon',   to: 'pokemons#pokemon'
+  match '/capture',   to: 'pokemons#new'
 
 
   # The priority is based upon order of creation:

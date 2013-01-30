@@ -1,29 +1,15 @@
-<% provide(:title, 'Pokemon : ' + @pokemon.name.titleize) %>
-<% provide(:favicon, @pokemon.name + '-icon.png' %>
+<% provide(:title, 'Pokedex') %>
+<% provide(:favicon, 'pokeball-icon.png') %>
 
 <hgroup>
-	<h1><%= @pokemon.name.titleize %></h1>
-	<h2><%= format_type(@pokemon.type1, @pokemon.type2) %></h2>
+	<h1>Pokedex</h1>
+	<h2>THESE ARE ALL THE POKEMON</h2>
 </hgroup>
 
-<h2>Base Stats</h2>
-<table>
-	<tr>
-		<th>HP</th>
-		<th>Attack</th>
-		<th>Defense</th>
-		<th>Sp.Atk</th>
-		<th>Sp.Def</th>
-		<th>Speed</th>
-	</tr>
-	<tr>
-		<td><%= @pokemon.hp %></td>
-		<td><%= @pokemon.attack %></td>
-		<td><%= @pokemon.defense %></td>
-		<td><%= @pokemon.spatk %></td>
-		<td><%= @pokemon.spdef %></td>
-		<td><%= @pokemon.speed %></td>
-	</tr>
-</table>
+<ul>
+	<% @pokemons.each do |p| %>
+		<li><%= link_to p.name.titleize, pokemon_path(p.id) %></li>
+	<% end %>
+</ul>
 
-<p><%= @pokemon.name.titleize %> is adorable.</p>
+<%= link_to 'New Pokemon?', capture_path %>
