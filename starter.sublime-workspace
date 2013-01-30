@@ -1,0 +1,265 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"recipient",
+				"recipient"
+			],
+			[
+				"Exce",
+				"Exception_Database"
+			],
+			[
+				"e",
+				"e"
+			],
+			[
+				"Except",
+				"Exception_Validation"
+			],
+			[
+				"Exc",
+				"Exception_Database"
+			],
+			[
+				"options",
+				"options"
+			],
+			[
+				"pass",
+				"passHash"
+			],
+			[
+				"non",
+				"Nonce"
+			],
+			[
+				"user",
+				"userName"
+			],
+			[
+				"validateNo",
+				"validateNoSpaces"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 311.0,
+		"selected_items":
+		[
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 384.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/xampp/htdocs/civetc/ruby/rails/starter_app/Gemfile",
+		"/C/xampp/htdocs/civetc/ruby/rails/starter_app/.gitignore",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/public/index.html",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/config/routes.rb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/public/pokemon.html",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/app/controllers/pokemon_controller.rb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/app/views/layouts/pokemon.html.erb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/app/views/pokemon/bulbasaur.html.erb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/app/views/pokemon/charmander.html.erb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/app/views/pokemon/squirtle.html.erb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/app/views/pokemon/pikachu.html.erb",
+		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/Gemfile",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Form.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/controls/bank.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Filter.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Modbox.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/bank.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/modbox.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/layout/_foot.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Forum/Filter.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Bank.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Switchboard.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/layout/_head.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/controls/news.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/inc.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/NewsComment.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/News.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/NewsPost.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/init.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/CustomException.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Db.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Dog.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Layout/Page.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Exception/Validation.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Exception/UsageError.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Exception/Authorization.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Exception/Database.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/news.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/controls/rescue.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/test.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/_css/style.css",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Rescue.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/_css/FCT.css",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/User.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Vehicle.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Staff.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/controls/login.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/controls/register.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Validation.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/controls/profile.php",
+		"/C/xampp/htdocs/civetc/reLaF/source/version/control_bank__1.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/profile.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/online.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/rescue/index.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/registration.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/donate.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/rescue/office.php",
+		"/C/xampp/htdocs/civetc/reLaF/public/index.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/layout/preFCT_head.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/layout/preFCT_foot.php",
+		"/C/xampp/htdocs/civetc/reLaF/include/classes/Player.php",
+		"/C/xampp/htdocs/civetc/lostandfound/includes/classes/User.php",
+		"/C/xampp/htdocs/civetc/lostandfound/includes/classes/Rescue.php",
+		"/C/xampp/htdocs/civetc/lostandfound/includes/controls/_register.php",
+		"/C/xampp/htdocs/civetc/bedouin/eqC/stable.php",
+		"/C/xampp/htdocs/civetc/lostandfound/includes/func.php",
+		"/C/xampp/htdocs/civetc/bedouin/eqC/training_center.php",
+		"/C/xampp/htdocs/civetc/reLaF/source/version/Form__0.php",
+		"/C/xampp/htdocs/civetc/reLaF/source/version/register__0.php",
+		"/C/Users/Katie/AppData/Roaming/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/C/Users/Katie/AppData/Roaming/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/C/Users/Katie/Desktop/file.php"
+	],
+	"find":
+	{
+		"height": 34.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"way",
+			"checkid",
+			"{\n",
+			"player",
+			"Player",
+			"player",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"User",
+			"user"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 62.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"",
+				"public/index.php"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+			[
+				"",
+				"/C/xampp/htdocs/civetc/reLaF/LaF.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 76.0,
+	"status_bar_visible": true
+}
