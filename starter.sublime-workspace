@@ -76,6 +76,7 @@
 	},
 	"file_history":
 	[
+		"/Users/shadowuser/Documents/ror_practice/starter/starter.sublime-project",
 		"/C/xampp/htdocs/civetc/ruby/rails/starter_app/Gemfile",
 		"/C/xampp/htdocs/civetc/ruby/rails/starter_app/.gitignore",
 		"/C/xampp/htdocs/civetc/ROR/rails_projects/starter_app/public/index.html",
@@ -260,6 +261,6 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 76.0,
+	"side_bar_width": 114.0,
 	"status_bar_visible": true
 }

@@ -13,3 +13,13 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Ignore other unneeded files apparently.
+doc/
+*.swp
+*~
+.project
+.DS_Store
+.idea
+.sublime-project
+.sublime-workspace
