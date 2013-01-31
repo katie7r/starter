@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130131202849) do
+ActiveRecord::Schema.define(:version => 20130131211417) do
 
   create_table "battles", :force => true do |t|
     t.string   "chosen_pokemon"
@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20130131202849) do
     t.integer  "chosen_hp"
     t.integer  "foe_hp"
     t.integer  "winner"
+    t.integer  "loser"
   end
 
   create_table "pokemons", :force => true do |t|

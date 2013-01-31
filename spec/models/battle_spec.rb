@@ -10,6 +10,7 @@
 #  chosen_hp      :integer
 #  foe_hp         :integer
 #  winner         :integer
+#  loser          :integer
 #
 
 require 'spec_helper'

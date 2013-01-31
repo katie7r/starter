@@ -1,5 +1,5 @@
 <% provide(:title, @pokemon.name.titleize) %>
-<% provide(:favicon, favicon(@pokemon.name)) %>
+<% provide(:favicon, @pokemon.name) %>
 
 <div id="pokemon-info" class="span5">
 	<hgroup class="span3">
@@ -34,7 +34,10 @@
 
 </div>
 <div class="pokemon-history span4">
+	<h2>Battle History</h2>
 
+	<h3>Wins: <%= @wins ? @wins : '0' %></h3>
+	<h3>Losses: <%= @losses ? @losses : '0' %></h3>
 
 </div>
 

@@ -105,8 +105,8 @@ hgroup h1 {
 	}
 }
 
-#pokemon-history {
-	
+.pokemon-history {
+	float: right;
 }
 
 /* Battle pages */
@@ -140,5 +140,19 @@ hgroup h1 {
 
 input[type=submit] {
 	display: block;
+}
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+  box-sizing: border-box;
+}
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
 }
 

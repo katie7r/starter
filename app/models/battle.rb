@@ -10,10 +10,11 @@
 #  chosen_hp      :integer
 #  foe_hp         :integer
 #  winner         :integer
+#  loser          :integer
 #
 
 class Battle < ActiveRecord::Base
-  attr_accessible :chosen_pokemon, :foe_pokemon, :chosen_hp, :foe_hp, :winner
+  attr_accessible :chosen_pokemon, :foe_pokemon, :chosen_hp, :foe_hp, :winner, :loser
 
   
 end

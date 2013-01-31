@@ -184,8 +184,13 @@ class BattlesController < ApplicationController
     # Update hp in database
     @battle.update_attributes(chosen_hp: @battle.chosen_hp, foe_hp: @battle.foe_hp)
     # Flash results if won
-    flash[:success] = "YOU WIN" if @battle.foe_hp == 0
-    flash[:error] = "YOU LOSE" if @battle.chosen_hp == 0
+    if @battle.foe_hp == 0
+      flash[:success] = "YOU WIN" 
+      @battle.update_attributes(winner: @battle.chosen_pokemon, loser: @battle.foe_pokemon)
+    elsif @battle.chosen_hp == 0
+      flash[:error] = "YOU LOSE"
+      @battle.update_attributes(winner: @battle.foe_pokemon, loser: @battle.chosen_pokemon)
+    end
   end
 
 

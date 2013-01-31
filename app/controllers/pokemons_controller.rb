@@ -6,6 +6,8 @@ class PokemonsController < ApplicationController
 
 	def show
 		@pokemon = Pokemon.find(params[:id])
+		@wins = Battle.find(:all, conditions: { winner: params[:id] }).count
+		@losses = Battle.find(:all, conditions: { loser: params[:id] }).count
 	end
 
 	def new
