@@ -19,6 +19,8 @@ class BattlesController < ApplicationController
 
   def create
     @battle = Battle.new(params[:battle])
+    @battle.chosen_hp = Pokemon.find(@battle.chosen_pokemon).hp
+    @battle.foe_hp = Pokemon.find(@battle.foe_pokemon).hp
     if @battle.save
       flash[:success] = "ENGAGE."
       redirect_to @battle
@@ -29,8 +31,10 @@ class BattlesController < ApplicationController
 
   def update
     @battle = Battle.find(params[:id])
+    @chosen = Pokemon.find(@battle.chosen_pokemon)
+    @foe = Pokemon.find(@battle.foe_pokemon)
     @choice = params[:commit]
-    do_battle(@attack_choice)
+    do_battle(@choice)
     redirect_to @battle
   end
 
@@ -38,12 +42,13 @@ class BattlesController < ApplicationController
   end
 
   def check_for_winner()
-    (@foe_hp > 0 && @chosen_hp > 0) ? won = false : won = true
+    (@battle.foe_hp > 0 && @battle.chosen_hp > 0) ? won = false : won = true
     won
   end
 
   def get_attack_stats(choice)
-    if choice.include?('Attack')
+    stats = {}
+    if @choice.include?('Attack')
         stats[:attack] = @chosen.attack
         stats[:defend] = @foe.defense
       else 
@@ -68,7 +73,7 @@ class BattlesController < ApplicationController
 
   def get_effectiveness(attack_type, defense_type)
     if attack_type == 'water'
-      effect =   2 if defense_type== 'fire'
+      effect =   2 if defense_type == 'fire'
       effect = 0.5 if defense_type == 'grass'
     elsif attack_type == 'fire'
       effect =   2 if defense_type == 'grass'
@@ -115,7 +120,7 @@ class BattlesController < ApplicationController
     modifier = get_modifier()
     # Get damage total
     damage = calculate_damage(level, stats, type, base, stab, 
-                  effectiveness, critical, modifier)
+                  effectiveness, critical, modifier).round
     # Flash action
     attack = 'attack' if choice.include?('Attack')
     attack ||= 'special attack'
@@ -148,7 +153,7 @@ class BattlesController < ApplicationController
     modifier = get_modifier()
     # Calculate damage
     damage = calculate_damage(level, stats, type, base, stab, 
-                  effectiveness, critical, modifier)
+                  effectiveness, critical, modifier).round
     # Flash action
     flashing = "#{@foe.name.titleize} used a #{type} #{attack}, dealing #{damage} damage."
     flash[:foe_attack] = flashing
@@ -159,26 +164,28 @@ class BattlesController < ApplicationController
   def do_battle(choice)
     # Attack in turns
     if @chosen.speed > @foe.speed
-      dealt = caluclate_damage_dealt(choice)
-      @foe_hp -= dealt.round
+      dealt = calculate_damage_dealt(choice)
+      @battle.foe_hp -= dealt
       unless check_for_winner()
         taken = calculate_damage_taken()
-        @chosen_hp -= taken.round
+        @battle.chosen_hp -= taken
       end
     else 
       taken = calculate_damage_taken()
-      @chosen_hp -= taken.round
+      @battle.chosen_hp -= taken
       unless check_for_winner()
-        dealt = caluclate_damage_dealt(choice)
-        @foe_hp -= dealt.round
+        dealt = calculate_damage_dealt(choice)
+        @battle.foe_hp -= dealt
       end
     end
     # Make sure hp is not below 0
-    @chosen_hp = 0 if @chosen_hp < 0
-    @foe_hp = 0 if @foe_hp < 0
+    @battle.chosen_hp = 0 if @battle.chosen_hp < 0
+    @battle.foe_hp = 0 if @battle.foe_hp < 0
+    # Update hp in database
+    @battle.update_attributes(chosen_hp: @battle.chosen_hp, foe_hp: @battle.foe_hp)
     # Flash results if won
-    flash[:success] = "YOU WIN" if @foe_hp == 0
-    flash[:error] = "YOU LOSE" if @chosen_hp == 0
+    flash[:success] = "YOU WIN" if @battle.foe_hp == 0
+    flash[:error] = "YOU LOSE" if @battle.chosen_hp == 0
   end
 
 

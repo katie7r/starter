@@ -7,6 +7,9 @@
 #  foe_pokemon    :string(255)
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
+#  chosen_hp      :integer
+#  foe_hp         :integer
+#  winner         :integer
 #
 
 require 'spec_helper'

@@ -10,6 +10,7 @@ Starter::Application.routes.draw do
 
   match '/choose',    to: 'battles#new'
   match '/battle',    to: 'battles#show'
+  match '/battle',    to: 'battles#update'
 
 
   # The priority is based upon order of creation:

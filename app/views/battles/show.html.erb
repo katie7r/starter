@@ -11,11 +11,11 @@
 		<h1>Battle Progress</h1>
 		<div id="you">
 			<h2>Your <%= @chosen.name.titleize %></h2>
-			<p>HP: <%= "#{@chosen_hp}/#{@chosen.hp}" %></p>
+			<p>HP: <%= "#{@battle.chosen_hp}/#{@chosen.hp}" %></p>
 		</div>
 		<div id="foe">
 			<h2>Foe's <%= @foe.name.titleize %></h2>
-			<p>HP: <%= "#{@foe_hp}/#{@foe.hp}" %></p>
+			<p>HP: <%= "#{@battle.foe_hp}/#{@foe.hp}" %></p>
 		</div>
 	</div>
 	<div id="battle-actions">
