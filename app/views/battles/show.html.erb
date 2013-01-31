@@ -21,7 +21,7 @@
 	<div id="battle-actions">
 		<h1>Battle Actions</h1>
 
-		<%= form_for(@battle, url: { action: 'edit' }) do |f| %>
+		<%= form_for(@battle, url: { action: 'update' }) do |f| %>
 			<% btn_classes = 'btn btn-inverse btn-large battle-btn' %>
 
 			<%= f.submit @chosen.type1.titleize + ' Attack', class: btn_classes %>
