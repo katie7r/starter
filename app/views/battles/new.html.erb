@@ -1,15 +1,19 @@
 <% provide(:title, 'I Choose You!') %>
 
-<h1>New Battle</h1>
+<div class="container">
+	<h1>New Battle</h1>
 
-<% form_for(@battle) do |f| %>
-	<h2>Choose Your Pokemon</h2>
-	<%= f.label :chosen_pokemon %>
-	<%= f.text_field :chosen_pokemon %>
+	<%= form_for(@battle) do |f| %>
+		<%  pokemon_selection = @pokemons.map { |p| [p.name.titleize, p.id] } %>
 
-	<h2>Challenge a Pokemon</h2>
-	<%= f.label :foe_pokemon %>
-	<%= f.text_field :foe_pokemon %>
+		<h2>Choose Your Pokemon</h2>
+		<%= f.label :chosen_pokemon %>
+		<%= f.select(:chosen_pokemon, options_for_select(pokemon_selection)) %>
 
-	<%= f.submit "MAKE EYE CONTACT" %>
-<% end %>
+		<h2>Challenge a Pokemon</h2>
+		<%= f.label :foe_pokemon %>
+		<%= f.select(:foe_pokemon, options_for_select(pokemon_selection)) %>
+
+		<%= f.submit "MAKE EYE CONTACT" %>
+	<% end %>
+</div>

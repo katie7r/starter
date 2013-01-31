@@ -1,4 +1,36 @@
 <% provide(:title, 'Battle') %>
 
-<h1>Battle Results</h1>
-<p>EVERYBODY IS A WINNER</p>
+<div class="battle-div span5">
+<% if @chosen.hp == 0 || @foe.hp == 0 %>
+	<div id="battle-results">
+		<h1>Battle Results</h1>
+		<p>EVERYBODY IS A WINNER</p>
+	</div>
+<% else %>
+	<div id="battle-progress">
+		<h1>Battle Progress</h1>
+		<div id="you">
+			<h2>Your <%= @chosen.name.titleize %></h2>
+			<p>HP: <%= "#{@chosen_hp}/#{@chosen.hp}" %></p>
+		</div>
+		<div id="foe">
+			<h2>Foe's <%= @foe.name.titleize %></h2>
+			<p>HP: <%= "#{@foe_hp}/#{@foe.hp}" %></p>
+		</div>
+	</div>
+	<div id="battle-actions">
+		<h1>Battle Actions</h1>
+
+		<%= form_for(@battle, url: { action: 'edit' }) do |f| %>
+			<% btn_classes = 'btn btn-inverse btn-large battle-btn' %>
+
+			<%= f.submit @chosen.type1.titleize + ' Attack', class: btn_classes %>
+			<%= f.submit @chosen.type1.titleize + ' Sp.Atk', class: btn_classes %>
+			<%= f.submit 'Normal Attack', class: btn_classes %>
+			<%= f.submit 'Normal Sp.Atk', class: btn_classes %>
+
+		<% end %>
+
+	</div>
+<% end %>
+</div>

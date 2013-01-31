@@ -9,11 +9,30 @@
 </head>
 <body>
 
-	<% flash.each do |key, value| %>
-		<div class="alert alert-<%= key %>"><%= value %></div>
-	<% end %>
+	<header class="navbar navbar-fixed-top navbar-inverse">
+		<div class="navbar-inner">
+			<div class="container">
+				<%= link_to "Starter App", '#', id: "logo" %>
+				<nav>
+					<ul class="nav pull-right">
+						<li><%= link_to "Pokedex", pokedex_path %></li>
+						<li><%= link_to "Battle", choose_path %></li>
+						<li><%= link_to "Account", '#' %></li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
 
-	<%= yield %>
+	<div class="container">
+
+		<% flash.each do |key, value| %>
+			<div class="alert alert-<%= key %>"><%= value %></div>
+		<% end %>
+
+		<%= yield %>
+
+	</div>
 	
 </body>
 </html>

@@ -5,9 +5,12 @@
 	<h2>THESE ARE ALL THE POKEMON</h2>
 </hgroup>
 
-<ul>
+<ul class="pokemon-list">
 	<% @pokemons.each do |p| %>
-		<li><%= link_to p.name.titleize, pokemon_path(p.id) %></li>
+		<li>
+			<%= image_tag favicon(p.name) %>
+			<%= link_to p.name.titleize, pokemon_path(p.id) %>
+		</li>
 	<% end %>
 </ul>
 

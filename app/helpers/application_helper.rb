@@ -5,4 +5,9 @@ module ApplicationHelper
 		favicon = icon + '-icon.png'
 	end	
 
+	def icon_path(image)
+		icon = favicon(image)
+		image_path(icon)
+	end
+
 end

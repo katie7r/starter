@@ -1,29 +1,41 @@
 <% provide(:title, @pokemon.name.titleize) %>
 <% provide(:favicon, favicon(@pokemon.name)) %>
 
-<hgroup>
-	<h1><%= @pokemon.name.titleize %></h1>
-	<h2><%= format_type(@pokemon.type1, @pokemon.type2) %></h2>
-</hgroup>
+<div id="pokemon-info" class="span5">
+	<hgroup class="span3">
+		<h1><%= @pokemon.name.titleize %></h1>
+		<h2><%= format_type(@pokemon.type1, @pokemon.type2) %> Type</h2>
+	</hgroup>
+	<%= image_tag(@pokemon.name + '.png', alt: @pokemon.name.titleize, 
+					class: "span2", size: "100x100") %>
 
-<h2>Base Stats</h2>
-<table>
-	<tr>
-		<th>HP</th>
-		<th>Attack</th>
-		<th>Defense</th>
-		<th>Sp.Atk</th>
-		<th>Sp.Def</th>
-		<th>Speed</th>
-	</tr>
-	<tr>
-		<td><%= @pokemon.hp %></td>
-		<td><%= @pokemon.attack %></td>
-		<td><%= @pokemon.defense %></td>
-		<td><%= @pokemon.spatk %></td>
-		<td><%= @pokemon.spdef %></td>
-		<td><%= @pokemon.speed %></td>
-	</tr>
-</table>
 
-<p><%= @pokemon.name.titleize %> is adorable.</p>
+	<h3 class="clear">Base Stats</h3>
+	<table class="table">
+		<tr>
+			<th>HP</th>
+			<th>Attack</th>
+			<th>Defense</th>
+			<th>Sp.Atk</th>
+			<th>Sp.Def</th>
+			<th>Speed</th>
+		</tr>
+		<tr>
+			<td><%= @pokemon.hp %></td>
+			<td><%= @pokemon.attack %></td>
+			<td><%= @pokemon.defense %></td>
+			<td><%= @pokemon.spatk %></td>
+			<td><%= @pokemon.spdef %></td>
+			<td><%= @pokemon.speed %></td>
+		</tr>
+	</table>
+
+	<p><%= @pokemon.name.titleize %> is adorable.</p>
+
+</div>
+<div class="pokemon-history span4">
+
+
+</div>
+
+
